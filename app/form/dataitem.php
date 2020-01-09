@@ -68,12 +68,12 @@
                           </select>
                        </div>
                        <div class="form-group col-sm-12">
-                            <input class="form-control" id="created_by" name="created_by" readonly="" value="<?php echo $_SESSION['username'] ?>">
-                            <input class="form-control" id="created_on" name="created_on" readonly="" value="<?php echo date('D d-m-yy | h:m:s') ?>">
-                            <input class="form-control" id="edited_by" name="edited_by" readonly="">
-                            <input class="form-control" id="edited_on" name="edited_on" readonly="">
-                            <input class="form-control" id="act" name="act" readonly="">
-                            <input class="form-control" id="id" name="id" readonly="">
+                            <input class="form-control" id="created_by" name="created_by" type="hidden" readonly="" value="<?php echo $_SESSION['username'] ?>">
+                            <input class="form-control" id="created_on" name="created_on" type="hidden" readonly="" value="<?php echo date('D d-m-yy | h:m:s') ?>">
+                            <input class="form-control" id="edited_by" name="edited_by" type="hidden" readonly="">
+                            <input class="form-control" id="edited_on" name="edited_on" type="hidden" readonly="">
+                            <input class="form-control" id="act" name="act" type="hidden" readonly="">
+                            <input class="form-control" id="id" name="id" type="hidden" readonly="">
                         </div>
                     </div>
                         <div class="row">

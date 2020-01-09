@@ -16,9 +16,9 @@ $jmlh_item      = $_POST['jmlh_item'];
 $sat_item       = $_POST['sat_item'];
 $category_item  = $_POST['category_item'];
 $created_by     = $_POST['created_by'];
-$edited_by      = $_POST['edited_by'];
+$edited_by      = $_SESSION['username'];
 $created_on     = $_POST['created_on'];
-$edited_on      = $_POST['edited_on'];
+$edited_on      = date('D d-m-yy | h:m:s');
 
 // ////////////////////////////////////////////////m_siswa//////////////////////////////////////////////////
 
@@ -42,7 +42,7 @@ elseif ($act == "adddataitem") {
     }
 }
 elseif ($act == "editdataitem") {
-    $log1 = "UPDATE data_item SET kd_item = '" . $kd_item . "', ket_item = '" . $ket_item . "', jmlh_item = '" . $jmlh_item . "', sat_item = '" . $sat_item . "', category_item = '" . $category_item . "', created_by = '" . $created_by . "', edited_by = '" . $edited_by . "', created_on = '" . $created_on . "', edited_on = '" . $edited_on . "' WHERE kd_item = '" . $id . "'";
+    $log1 = "UPDATE data_item SET kd_item = '" . $kd_item . "', ket_item = '" . $ket_item . "', jmlh_item = '" . $jmlh_item . "', sat_item = '" . $sat_item . "', category_item = '" . $category_item . "', edited_by = '".$edited_by."', edited_on = '" . $edited_on . "' WHERE id_item = '" . $id . "'";
             if ($conn->query($log1) == true) {
             $status = '1'; //Berhasil
     }
